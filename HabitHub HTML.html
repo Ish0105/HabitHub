@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HabitHub–Daily Habit Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header>
+    <div>
+      <h1>HabitHub</h1>
+      <p id="date" class="muted"></p>
+    </div>
+    <button id="theme" class="icon-btn" title="Toggle theme">🌓</button>
+  </header>
+
+  <section class="card summary">
+    <div class="row"><strong id="msg">Let's get started</strong><span id="pct">0%</span></div>
+    <div class="bar"><div id="fill"></div></div>
+  </section>
+
+  <section class="card">
+    <form id="form">
+      <div class="row gap">
+        <select id="emoji" aria-label="Emoji">
+          <option>🎯</option><option>📚</option><option>💪</option><option>🧘</option>
+          <option>💧</option><option>💻</option><option>🛌</option><option>🥗</option><option>✍️</option>
+        </select>
+        <input id="name" placeholder="New habit (e.g. Study)" required maxlength="40">
+      </div>
+      <input id="cps" placeholder="Checkpoints, comma separated (optional)">
+      <button class="primary">+ Add habit</button>
+    </form>
+  </section>
+
+  <section id="list"></section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
